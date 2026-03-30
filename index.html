@@ -2,22 +2,43 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Prueba Técnica Stratio</title>
-
-    <link rel="stylesheet" href="index.css">
-
-
-
-
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratio - Dashboard Sebastián</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="titulo">
-        <h1>Proyecto Desplegado en Kubernetes</h1>
+    <div class="dashboard">
+        <header>
+            <h1>🚀 Infraestructura Kubernetes</h1>
+            <p class="subtitle">Prueba Técnica - Candidato: <strong>Sebastián</strong></p>
+        </header>
+
+        <main>
+            <div class="card status-card">
+                <h3>Estado del Despliegue</h3>
+                <div class="status-indicator">
+                    <span class="dot" id="status-dot"></span>
+                    <p id="status-text">Sincronizando con el clúster...</p>
+                </div>
+                <button id="check-btn">Verificar Salud del Pod</button>
+            </div>
+
+            <div class="card info-card">
+                <h3>Detalles Técnicos</h3>
+                <ul>
+                    <li><strong>Orquestador:</strong> Kubernetes (Minikube)</li>
+                    <li><strong>Arquitectura:</strong> Deployment (2 Réplicas)</li>
+                    <li><strong>Red:</strong> Ingress Nginx (Capa 7)</li>
+                    <li><strong>Cloud:</strong> Render (Auto-Deploy)</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <div id="clock">--:--:--</div>
+            <p>Entorno: <span id="env-tag">Linux Mint / Windows 11</span></p>
+        </footer>
     </div>
-    <div class="contenido">
-        <p>Hola, soy Sebastián. Esta página corre dentro de un contenedor Nginx.</p>
-        <p><b>Estado:</b> ¡Éxito total!</p>
-    </div>
+    <script src="script.js"></script>
 </body>
 </html>
